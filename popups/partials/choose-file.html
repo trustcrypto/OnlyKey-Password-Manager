@@ -1,0 +1,14 @@
+<docs>
+  <errormessage ng-show="errorMessage">{{errorMessage}}</errormessage>
+  <successmessage ng-show="successMessage">{{successMessage}}</successmessage>
+  <fieldset ng-show="databases && databases.length">
+    <legend>Choose a password file:</legend>
+    <filelist>
+      <ul>
+        <li ng-repeat="db in databases" ng-click="chooseDatabase(db)">
+          <icon p="{{db.provider.icon}}"></icon>{{db.title}} 
+        </li>
+      </ul>
+    </filelist>
+  </fieldset>
+</docs>

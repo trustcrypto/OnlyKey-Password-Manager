@@ -1,0 +1,6 @@
+<pageinfo ng-show="entries && (url || title)">{{title}} - {{origin}}</pageinfo>
+<form class="pure-form">
+  <input type="text" id="filter" ng-model="filter" ng-model-options="{debounce: 250}" class="fill" autofocus placeholder="Type to filter...">
+</form>
+<ng-include src="'partials/password-list.html'"></ng-include>
+<successmessage ng-show="unlockedState.clipboardStatus">{{unlockedState.clipboardStatus}}</successmessage>
